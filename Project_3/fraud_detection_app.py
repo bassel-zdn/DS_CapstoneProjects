@@ -7,7 +7,7 @@ import xgboost as xgb
 
 @st.cache_resource
 def load_model():
-    with open("xgb_model_balanced.pkl", "rb") as f:
+    with open("balanced/xgb_model_balanced.pkl", "rb") as f:
         return pickle.load(f)
 
 model = load_model()
@@ -54,7 +54,7 @@ legit_example = {
     'V8': 0.2, 'V9': -0.2, 'V10': 0.1, 'V11': -0.1, 'V12': 0.3, 'V13': -0.3,
     'V14': 0.1, 'V15': -0.2, 'V16': 0.1, 'V17': -0.1, 'V18': 0.2, 'V19': -0.2,
     'V20': 0.1, 'V21': -0.1, 'V22': 0.2, 'V23': -0.1, 'V24': 0.1, 'V25': -0.1,
-    'V26': 0.1, 'V27': -0.2, 'V28': 0.2, 'Amount': 30.0
+    'V26': 0.1, 'V27': -0.2, 'V28': 0.2, 'Amount': 30.0, 'Hour': 12.0
 }
 
 # --- Streamlit UI ---
